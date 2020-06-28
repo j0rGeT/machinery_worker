@@ -1,0 +1,10 @@
+rabbitmq:
+  enable: true
+  consume: true
+  url: amqp://guest:guest@127.0.0.1:5672
+  receivers:
+    -
+      name: resource-scheduler
+      queueName: callback_queue
+      routerKey: resource-scheduler
+      exchangeName: resource-scheduler-topic
